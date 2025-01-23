@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setSelectedUser } from "../redux/userSlice";
+import { setSelectedUser, setUsers } from "../redux/userSlice";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { setLatestMessages } from "../redux/chatSlice";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Aside = () => {
   const { users, onlineUsers, selectedUser } = useSelector(
@@ -12,7 +12,11 @@ export const Aside = () => {
   const { latestMessages } = useSelector((state) => state.chat);
 
   const [searchedKeywords, setSearchKeywords] = useState("");
-  const [searchedUsers, setSearchedUsers] = useState(users);
+  const [searchedUsers, setSearchedUsers] = useState(null);
+
+  useEffect(() => {
+    setSearchedUsers(users);
+  }, [users]);
 
   const dispatch = useDispatch();
 

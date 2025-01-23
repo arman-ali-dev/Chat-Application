@@ -25,7 +25,7 @@ app.use(express.json());
 
 connectMongoDB(process.env.MONGODB_URI)
   .then(() => console.log("Database connected!"))
-  .catch(() => console.log("Database disconnected!"));
+  .catch(() => console.log("Database connection failed!"));
 
 app.use("/api/users", userRoute);
 app.use("/api/messages", authentication, messsageRoute);

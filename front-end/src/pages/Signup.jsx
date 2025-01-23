@@ -34,7 +34,7 @@ const Signup = () => {
     setIsLoading(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/api/users/signup",
+        "https://chat-application-irut.onrender.com/api/users/signup",
         userInfo
       );
 

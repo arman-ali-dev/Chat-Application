@@ -16,7 +16,7 @@ export const Header = () => {
   const handleLogout = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8000/api/users/logout",
+        "https://chat-application-irut.onrender.com/api/users/logout",
         {
           withCredentials: true,
         }

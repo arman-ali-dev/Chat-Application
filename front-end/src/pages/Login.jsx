@@ -31,7 +31,7 @@ const Login = () => {
     setIsLoading(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/api/users/login",
+        "https://chat-application-irut.onrender.com/api/users/login",
         userInfo
       );
 

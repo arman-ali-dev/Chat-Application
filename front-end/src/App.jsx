@@ -19,7 +19,7 @@ const App = () => {
     let socket;
 
     if (user) {
-      socket = io("http://localhost:8000", {
+      socket = io("https://chat-application-irut.onrender.com", {
         query: {
           userID: user._id,
         },

@@ -49,7 +49,7 @@ export const ChatWindow = () => {
 
     try {
       const { data } = await axios.post(
-        `http://localhost:8000/api/messages/send/${selectedUser?._id}`,
+        `https://chat-application-irut.onrender.com/api/messages/send/${selectedUser?._id}`,
         { text },
         {
           withCredentials: true,

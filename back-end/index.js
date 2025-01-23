@@ -17,7 +17,7 @@ const { authentication } = require("./middlewares/authMiddleware");
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://chat-application-irut.onrender.com",
     credentials: true,
   })
 );

@@ -10,7 +10,7 @@ export default function useGetAllLatestMessages() {
   const fetchMessages = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8000/api/messages/latest/all",
+        "https://chat-application-irut.onrender.com/api/messages/latest/all",
         {
           withCredentials: true,
           headers: {

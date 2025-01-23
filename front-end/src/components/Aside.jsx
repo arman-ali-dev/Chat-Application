@@ -19,7 +19,7 @@ export const Aside = () => {
   const handleDropLatestMessages = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:8000/api/messages/latest/drop/${id}`,
+        `https://chat-application-irut.onrender.com/api/messages/latest/drop/${id}`,
         {
           withCredentials: true,
           headers: {

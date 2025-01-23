@@ -41,7 +41,7 @@ export default function EditProfile() {
       if (username) formData.append("username", username);
 
       const { data } = await axios.patch(
-        "http://localhost:8000/api/users/edit",
+        "https://chat-application-irut.onrender.com/api/users/edit",
         formData,
         {
           withCredentials: true,

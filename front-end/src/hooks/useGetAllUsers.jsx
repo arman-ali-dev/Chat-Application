@@ -9,12 +9,15 @@ export default function useGetAllUsers() {
 
   const fetchUsers = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/users/all", {
-        withCredentials: true,
-        headers: {
-          Authorization: `Bearer ${Cookies.get("token")}`,
-        },
-      });
+      const { data } = await axios.get(
+        "https://chat-application-irut.onrender.com/api/users/all",
+        {
+          withCredentials: true,
+          headers: {
+            Authorization: `Bearer ${Cookies.get("token")}`,
+          },
+        }
+      );
 
       dispatch(setUsers(data.users));
     } catch (error) {

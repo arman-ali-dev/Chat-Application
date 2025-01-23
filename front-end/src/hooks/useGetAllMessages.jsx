@@ -11,7 +11,7 @@ export default function useGetAllMessages() {
   const fetchMessages = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/api/messages/all/${selectedUser._id}`,
+        `https://chat-application-irut.onrender.com/api/messages/all/${selectedUser._id}`,
         {
           withCredentials: true,
           headers: {
